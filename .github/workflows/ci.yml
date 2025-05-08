@@ -38,7 +38,10 @@ jobs:
         run: go install honnef.co/go/tools/cmd/staticcheck@latest
 
       - name: Run Formatting
-        run: test -z $(go fmt ./... staticcheck ./...)
+        run: test -z $(go fmt ./... )
+
+      - name: Run Staticcheck
+        run: staticcheck ./...
 
 
 
